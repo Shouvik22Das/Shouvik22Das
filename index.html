@@ -1,103 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shouvik Das - Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Shouvik Das - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    // We can remove the custom colors for a default light theme
+                    // or redefine them for a light palette.
+                    // For simplicity, we'll remove them and use default Tailwind colors.
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Basic scrollbar styling for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Light gray track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; /* Blue thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; /* Darker blue on hover */
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white font-sans text-gray-700 leading-relaxed antialiased">
 
-    <header>
-        <div class="container">
-            [cite_start]<h1>Shouvik Das [cite: 1, 32]</h1>
-            <p>Graduate Mechanical Engineer | [cite_start]Toronto Metropolitan University [cite: 2, 33]</p>
-            <nav>
-                [cite_start]<a href="mailto:shouvik.das@torontomu.ca">shouvik.das@torontomu.ca [cite: 3, 34]</a>
-                [cite_start]<a href="https://www.linkedin.com/in/LINKEDIN">LinkedIn [cite: 4, 36]</a>
-                [cite_start]<span>(647) 567-7340 [cite: 3, 34]</span>
-                [cite_start]<span>Toronto, ON [cite: 5, 36]</span>
-            </nav>
-        </div>
-    </header>
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto p-6 md:p-12">
 
-    <main class="container">
-        <h2>Engineering Projects</h2>
-
-        <article class="project">
-            [cite_start]<h3>PCB Test Fixture [cite: 6]</h3>
-            <img src="pcb-fixture.jpg" alt="PCB Test Fixture">
+        <!-- Header Section -->
+        <header class="mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Shouvik Das</h1>
+            <h2 class="text-xl md:text-2xl font-medium text-blue-600 mb-4">Graduate Mechanical Engineer</h2>
+            <p class="text-lg text-gray-600 mb-6">
+                Toronto Metropolitan University Graduate with a passion for designing practical solutions, automating processes, and leveraging data to drive continuous improvement.
+            </p>
             
-            <h4>What?</h4>
-            <ul>
-                [cite_start]<li>Designed a fixture to enable a safe testing procedure. [cite: 8]</li>
-                [cite_start]<li>Designed to include a safety interlock to protect the operator from high voltage. [cite: 9]</li>
-                [cite_start]<li>Clear acrylic lid to allow screw adjustment during test. [cite: 10]</li>
-            </ul>
-            
-            <h4>How?</h4>
-            <ul>
-                [cite_start]<li>Designed in SolidWorks utilizing GD&T, and fabricated using in-house 3D printing. [cite: 16]</li>
-            </ul>
-        </article>
+            <!-- Contact Info -->
+            <div class="flex flex-wrap gap-x-6 gap-y-2 text-gray-600">
+                <a href="mailto:shouvik.das@torontomu.ca" class="hover:text-blue-600 transition-colors duration-300">
+                    <i class="fa-solid fa-envelope w-5 mr-1"></i> shouvik.das@torontomu.ca
+                </a>
+                <span class="whitespace-nowrap">
+                    <i class="fa-solid fa-phone w-5 mr-1"></i> 647-567-7340
+                </span>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+                    <i class="fa-brands fa-linkedin w-5 mr-1"></i> LinkedIn
+                </a>
+                <span class="whitespace-nowrap">
+                    <i class="fa-solid fa-location-dot w-5 mr-1"></i> Toronto, ON
+                </span>
+            </div>
+        </header>
 
-        <article class="project">
-            [cite_start]<h3>Scrap Report - Quality Analysis Tool [cite: 11]</h3>
-            <img src="scrap-report.jpg" alt="Scrap Report Dashboard">
-            
-            <h4>What?</h4>
-            <ul>
-                [cite_start]<li>Developed a dynamic dashboard, highlighting the most costly issues in the factory. [cite: 25]</li>
-                [cite_start]<li>Provides trends and helps with analysis for root cause and corrective actions. [cite: 26]</li>
-                [cite_start]<li>Provides visibility into $1M in quality costs, enabling data-driven continuous improvement projects, and is used to maintain accountability. [cite: 27]</li>
-            </ul>
-            
-            <h4>How?</h4>
-            <ul>
-                [cite_start]<li>Created using PowerBI for dynamic filtering, with interactive graphs and tables. [cite: 29]</li>
-                [cite_start]<li>Utilized SQL to extract data and VBA coding to automate data transformation, enabling data-driven decision-making. [cite: 30]</li>
-            </ul>
-        </article>
+        <!-- Projects Section -->
+        <main>
+            <h3 class="text-3xl font-bold text-gray-900 mb-8">Featured Projects</h3>
 
-        <article class="project">
-            [cite_start]<h3>Parylene Coating Card Hanger [cite: 35]</h3>
-            <img src="coating-hanger.jpg" alt="Parylene Coating Card Hanger">
-            
-            <h4>What?</h4>
-            <ul>
-                [cite_start]<li>Easy to assemble and maintain fixture, made to enable a safe Parylene coating process per customer requirement. [cite: 40]</li>
-            </ul>
-            
-            <h4>How?</h4>
-            <ul>
-                <li>Designed on SolidWorks using DFM principles. [cite_start]Comprised of Aluminum and Delrin materials. [cite: 42]</li>
-                [cite_start]<li>Worked closely with external vendors for machining within requirements and budget. [cite: 43]</li>
-            </ul>
-        </article>
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
-        <article class="project">
-            [cite_start]<h3>Consumables Web Tracker - Inventory Management Tool [cite: 38, 44]</h3>
-            <img src="web-tracker.jpg" alt="Web Tracker App">
-            
-            <h4>What?</h4>
-            <ul>
-                [cite_start]<li>Developed a web-based inventory management system. [cite: 119]</li>
-                [cite_start]<li>Prevents production delays by providing real-time stock visibility for hundreds of critical components. [cite: 119]</li>
-                [cite_start]<li>Facilitates collaboration among planners, engineers, and operators. [cite: 120]</li>
-            </ul>
-            
-            <h4>How?</h4>
-            <ul>
-                [cite_start]<li>Made using Google AppScript, and API integration. [cite: 123, 124]</li>
-                [cite_start]<li>Utilizes HTML for front-end interface, and JavaScript for backend operations. [cite: 125, 127]</li>
-            </ul>
-        </article>
+                <!-- Project 1: PCB Test Fixture -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/f9fafb/374151?text=PCB+Test+Fixture" alt="PCB Test Fixture Placeholder" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">PCB Test Fixture</h4>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">What?</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                            <li>Designed a fixture to enable a safe testing procedure.</li>
+                            <li>Includes a safety interlock to protect from high voltage.</li>
+                            <li>Clear acrylic lid for screw adjustment during testing.</li>
+                        </ul>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">How?</h5>
+                        <p class="text-gray-600">
+                            Designed in <strong class="text-gray-800">SolidWorks</strong> utilizing GD&T, and fabricated using in-house <strong class="text-gray-800">3D printing</strong>.
+                        </p>
+                    </div>
+                </div>
 
-    </main>
+                <!-- Project 2: Scrap Report - Quality Analysis Tool -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/f9fafb/374151?text=Quality+Dashboard" alt="Scrap Report Dashboard Placeholder" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Scrap Report - Quality Analysis Tool</h4>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">What?</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                            <li>Developed a dynamic dashboard highlighting costly factory issues.</li>
+                            <li>Provides trends for root cause and corrective action analysis.</li>
+                            <li>Gives visibility into $1M+ in quality costs to drive improvement.</li>
+                        </ul>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">How?</h5>
+                        <p class="text-gray-600">
+                            Created using <strong class="text-gray-800">PowerBI</strong> for dynamic filtering. Utilized <strong class="text-gray-800">SQL</strong> to extract data and <strong class="text-gray-800">VBA</strong> to automate data transformation.
+                        </p>
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 Shouvik Das. All rights reserved.</p>
-    </footer>
+                <!-- Project 3: Parylene Coating Card Hanger -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/f9fafb/374151?text=Parylene+Fixture" alt="Parylene Coating Card Hanger Placeholder" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Parylene Coating Card Hanger</h4>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">What?</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                            <li>Easy to assemble and maintain fixture.</li>
+                            <li>Enables a safe Parylene coating process per customer requirement.</li>
+                        </ul>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">How?</h5>
+                        <p class="text-gray-600">
+                            Designed on <strong class="text-gray-800">SolidWorks</strong> using DFM principles. Comprised of Aluminum and Delrin. Worked closely with external vendors for machining.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Project 4: Consumables Web Tracker -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/f9fafb/374151?text=Inventory+Web+App" alt="Inventory Management Tool Placeholder" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-3">Consumables Web Tracker</h4>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">What?</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                            <li>Developed a web-based inventory management system.</li>
+                            <li>Prevents production delays with real-time stock visibility.</li>
+                            <li>Facilitates collaboration among planners, engineers, and operators.</li>
+                        </ul>
+                        
+                        <h5 class="font-bold text-blue-600 mb-2">How?</h5>
+                        <p class="text-gray-600">
+                            Made using <strong class="text-gray-800">Google AppScript</strong> and API integration. Utilizes <strong class="text-gray-800">HTML</strong> for front-end and <strong class="text-gray-800">JavaScript</strong> for backend operations.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 md:mt-16 text-gray-500">
+            <p>Shouvik Das &copy; 2025</p>
+            <p class="text-sm">Built with HTML, Tailwind CSS, and hosted on GitHub Pages.</p>
+        </footer>
+
+    </div>
+    
 </body>
 </html>
+
