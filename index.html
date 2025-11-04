@@ -111,12 +111,13 @@
                 <!-- Updated card style: bg-white, shadow-md, hover:shadow-xl -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
                     <!-- 
-                      UPDATED: Reverted to a 2-column grid for side-by-side images.
-                      Adjusted height to h-48.
+                      UPDATED: Changed to a 3-column grid for three images.
+                      Adjusted height to h-36.
                     -->
-                    <div class="grid grid-cols-2 gap-2 p-2">
-                        <img src="images/pcb-test-fixture.png" alt="PCB Test Fixture Project - Image 1" class="w-full h-48 object-cover rounded-md">
-                        <img src="images/pcb-test-fixture-2.png" alt="PCB Test Fixture Project - Image 2" class="w-full h-48 object-cover rounded-md">
+                    <div class="grid grid-cols-3 gap-2 p-2">
+                        <img src="images/pcb-test-fixture.png" alt="PCB Test Fixture Project - Image 1" class="w-full h-36 object-cover rounded-md">
+                        <img src="images/pcb-test-fixture-2.png" alt="PCB Test Fixture Project - Image 2" class="w-full h-36 object-cover rounded-md">
+                        <img src="images/pcb-test-fixture-3.png" alt="PCB Test Fixture Project - Image 3" class="w-full h-36 object-cover rounded-md">
                     </div>
                     <div class="p-6 pt-4"> <!-- Adjusted padding -->
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">PCB Test Fixture</h4>
@@ -230,7 +231,7 @@
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">Consumables Web Tracker</h4>
                         
                         <h5 class="font-bold text-blue-600 mb-2">What?</h5>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                        <ul class="list-disc list-inside text-gray-600 space-f-1 mb-4">
                             <li>Developed a web-based inventory management system.</li>
                             <li>Prevents production delays with real-time stock visibility.</li>
                             <li>Facilitates collaboration among planners, engineers, and operators.</li>
@@ -239,7 +240,7 @@
                         <h5 class="font-bold text-blue-600 mb-2">How?</h5>
                         <p class="text-gray-600">
                             Made using <strong class="text-gray-800">Google AppScript</strong> and API integration. Utilizes <strong class="text-gray-800">HTML</strong> for front-end and <strong class="text-gray-800">JavaScript</strong> for backend operations.
-                        </idv>
+                        </p> <!-- Fixed unclosed </div> tag here -->
                         <!-- Added Skill Tags -->
                         <div class="mt-5 pt-4 border-t border-gray-200">
                             <h6 class="text-sm font-bold text-gray-500 uppercase mb-3">Key Skills</h6>
@@ -266,6 +267,8 @@
     
 </body>
 </html>
+
+
 
 
 
