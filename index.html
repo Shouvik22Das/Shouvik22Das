@@ -67,14 +67,27 @@
 
         <!-- Header Section -->
         <header class="mb-12 md:mb-16 header-fade">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Shouvik Das</h1>
-            <h2 class="text-xl md:text-2xl font-medium text-blue-600 mb-4">Graduate Mechanical Engineer</h2>
-            <p class="text-lg text-gray-600 mb-6">
-                Toronto Metropolitan University Graduate with a passion for designing practical solutions, automating processes, and leveraging data to drive continuous improvement.
-            </p>
+            <!-- Flex container for profile picture and text -->
+            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-8">
+                <!-- Profile Picture -->
+                <img 
+                    src="images/profile-picture.jpg" 
+                    alt="Shouvik Das" 
+                    class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover shadow-lg flex-shrink-0"
+                    onerror="this.src='https://placehold.co/128x128/3b82f6/ffffff?text=SD&font=inter'"
+                >
+                <!-- Text Content -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Shouvik Das</h1>
+                    <h2 class="text-xl md:text-2xl font-medium text-blue-600 mb-4">Graduate Mechanical Engineer</h2>
+                    <p class="text-lg text-gray-600">
+                        Toronto Metropolitan University Graduate with a passion for designing practical solutions, automating processes, and leveraging data to drive continuous improvement.
+                    </p>
+                </div>
+            </div>
             
             <!-- Contact Info: "chips" -->
-            <div class="flex flex-wrap gap-3 text-gray-600">
+            <div class="flex flex-wrap gap-3 text-gray-600 justify-center md:justify-start">
                 <a href="mailto:shouvik.das@torontomu.ca" class="flex items-center bg-gray-100 hover:bg-blue-100 hover:text-blue-700 text-gray-700 px-4 py-1.5 rounded-full transition-colors duration-300 text-sm font-medium">
                     <i class="fa-solid fa-envelope w-5 mr-2"></i>
                     shouvik.das@torontomu.ca
@@ -313,6 +326,8 @@
     
 </body>
 </html>
+
+
 
 
 
