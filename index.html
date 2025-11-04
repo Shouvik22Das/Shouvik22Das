@@ -180,17 +180,16 @@
 
                 <!-- Project 3: Parylene Coating Card Hanger -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                    <!-- 
-                      FIX: Changed to flex-col to stack images vertically.
-                      This allows each image to render at its natural aspect ratio.
-                    -->
-                    <div class="flex flex-col gap-2 p-2">
+                    <!-- 2-column grid for images -->
+                    <div class="grid grid-cols-2 gap-2 p-2">
                         <!-- 
                           FIXES: 
-                          1. Removed fixed height (h-72) to allow natural height.
+                          1. Changed to object-contain
+                          2. Added bg-gray-100
+                          UPDATED: Increased height from h-48 to h-72
                         -->
-                        <img src="images/parylene-hanger.png" alt="Parylene Coating Card Hanger Project - Image 1" class="w-full object-contain rounded-md bg-gray-100">
-                        <img src="images/parylene-hanger-2.png" alt="Parylene Coating Card Hanger Project - Image 2" class="w-full object-contain rounded-md bg-gray-100">
+                        <img src="images/parylene-hanger.png" alt="Parylene Coating Card Hanger Project - Image 1" class="w-full h-72 object-contain rounded-md bg-gray-100">
+                        <img src="images/parylene-hanger-2.png" alt="Parylene Coating Card Hanger Project - Image 2" class="w-full h-72 object-contain rounded-md bg-gray-100">
                     </div>
                     <div class="p-6 pt-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">Parylene Coating Card Hanger</h4>
@@ -271,6 +270,8 @@
     
 </body>
 </html>
+
+
 
 
 
