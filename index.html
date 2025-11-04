@@ -15,30 +15,27 @@
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
                     },
-                    // We can remove the custom colors for a default light theme
-                    // or redefine them for a light palette.
-                    // For simplicity, we'll remove them and use default Tailwind colors.
                 },
             },
         }
     </script>
     <style>
-        /* Basic scrollbar styling for a more modern look */
+        /* Basic scrollbar styling */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f1f1; /* Light gray track */
+            background: #f1f1f1;
         }
         ::-webkit-scrollbar-thumb {
-            background: #3b82f6; /* Blue thumb */
+            background: #3b82f6;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; /* Darker blue on hover */
+            background: #2563eb;
         }
     </style>
-    <!-- New animation styles -->
+    <!-- Animation styles -->
     <style>
         @keyframes fadeIn {
             from {
@@ -50,7 +47,6 @@
                 transform: translateY(0);
             }
         }
-        /* Staggered animations */
         .header-fade {
             animation: fadeIn 0.6s ease-out forwards;
         }
@@ -60,7 +56,6 @@
         }
     </style>
 </head>
-<!-- Changed to a light gray background for a bit of contrast -->
 <body class="bg-gray-50 font-sans text-gray-700 leading-relaxed antialiased">
 
     <!-- Container -->
@@ -68,14 +63,13 @@
 
         <!-- Header Section -->
         <header class="mb-12 md:mb-16 header-fade">
-            <!-- Added gradient text to your name -->
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Shouvik Das</h1>
             <h2 class="text-xl md:text-2xl font-medium text-blue-600 mb-4">Graduate Mechanical Engineer</h2>
             <p class="text-lg text-gray-600 mb-6">
                 Toronto Metropolitan University Graduate with a passion for designing practical solutions, automating processes, and leveraging data to drive continuous improvement.
             </p>
             
-            <!-- Contact Info: Styled as "chips" -->
+            <!-- Contact Info: "chips" -->
             <div class="flex flex-wrap gap-3 text-gray-600">
                 <a href="mailto:shouvik.das@torontomu.ca" class="flex items-center bg-gray-100 hover:bg-blue-100 hover:text-blue-700 text-gray-700 px-4 py-1.5 rounded-full transition-colors duration-300 text-sm font-medium">
                     <i class="fa-solid fa-envelope w-5 mr-2"></i>
@@ -100,26 +94,24 @@
         <main class="projects-fade opacity-0">
             <h3 class="text-3xl font-bold text-gray-900 mb-8">Featured Projects</h3>
 
-            <!-- Project Grid -->
-            <!-- 
-              UPDATED: Removed 'md:grid-cols-2' to make it a single column on all screen sizes.
-              Added 'max-w-2xl' and 'mx-auto' to constrain the width and center the column on large screens.
-            -->
+            <!-- Project Grid: Single column, centered with max-width -->
             <div class="grid grid-cols-1 gap-6 md:gap-8 max-w-2xl mx-auto">
 
                 <!-- Project 1: PCB Test Fixture -->
-                <!-- Updated card style: bg-white, shadow-md, hover:shadow-xl -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                    <!-- 
-                      UPDATED: Changed to a 3-column grid for three images.
-                      Adjusted height to h-36.
-                    -->
+                    <!-- 3-column grid for images -->
                     <div class="grid grid-cols-3 gap-2 p-2">
-                        <img src="images/pcb-test-fixture.png" alt="PCB Test Fixture Project - Image 1" class="w-full h-36 object-cover rounded-md">
-                        <img src="images/pcb-test-fixture-2.png" alt="PCB Test Fixture Project - Image 2" class="w-full h-36 object-cover rounded-md">
-                        <img src="images/pcb-test-fixture-3.png" alt="PCB Test Fixture Project - Image 3" class="w-full h-36 object-cover rounded-md">
+                        <!-- 
+                          FIXES: 
+                          1. Updated filenames to .jpg
+                          2. Changed to object-contain to prevent cropping
+                          3. Added bg-gray-100 for a clean background
+                        -->
+                        <img src="images/pcb-test-fixture.jpg" alt="PCB Test Fixture Project - Image 1" class="w-full h-36 object-contain rounded-md bg-gray-100">
+                        <img src="images/pcb-test-fixture-2.png" alt="PCB Test Fixture Project - Image 2" class="w-full h-36 object-contain rounded-md bg-gray-100">
+                        <img src="images/pcb-test-fixture-3.jpg" alt="PCB Test Fixture Project - Image 3" class="w-full h-36 object-contain rounded-md bg-gray-100">
                     </div>
-                    <div class="p-6 pt-4"> <!-- Adjusted padding -->
+                    <div class="p-6 pt-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">PCB Test Fixture</h4>
                         
                         <h5 class="font-bold text-blue-600 mb-2">What?</h5>
@@ -133,7 +125,7 @@
                         <p class="text-gray-600">
                             Designed in <strong class="text-gray-800">SolidWorks</strong> utilizing GD&T, and fabricated using in-house <strong class="text-gray-800">3D printing</strong>.
                         </p>
-                        <!-- Added Skill Tags -->
+                        <!-- Skill Tags -->
                         <div class="mt-5 pt-4 border-t border-gray-200">
                             <h6 class="text-sm font-bold text-gray-500 uppercase mb-3">Key Skills</h6>
                             <div class="flex flex-wrap gap-2">
@@ -147,15 +139,17 @@
 
                 <!-- Project 2: Scrap Report - Quality Analysis Tool -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                    <!-- 
-                      UPDATED: Reverted to a 2-column grid for side-by-side images.
-                      Adjusted height to h-48.
-                    -->
+                    <!-- 2-column grid for images -->
                     <div class="grid grid-cols-2 gap-2 p-2">
-                        <img src="images/quality-dashboard.png" alt="Scrap Report Dashboard Project - Image 1" class="w-full h-48 object-cover rounded-md">
-                        <img src="images/quality-dashboard-2.png" alt="Scrap Report Dashboard Project - Image 2" class="w-full h-48 object-cover rounded-md">
+                        <!-- 
+                          FIXES: 
+                          1. Changed to object-contain
+                          2. Added bg-gray-100
+                        -->
+                        <img src="images/quality-dashboard.png" alt="Scrap Report Dashboard Project - Image 1" class="w-full h-48 object-contain rounded-md bg-gray-100">
+                        <img src="images/quality-dashboard-2.png" alt="Scrap Report Dashboard Project - Image 2" class="w-full h-48 object-contain rounded-md bg-gray-100">
                     </div>
-                    <div class="p-6 pt-4"> <!-- Adjusted padding -->
+                    <div class="p-6 pt-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">Scrap Report - Quality Analysis Tool</h4>
                         
                         <h5 class="font-bold text-blue-600 mb-2">What?</h5>
@@ -169,7 +163,7 @@
                         <p class="text-gray-600">
                             Created using <strong class="text-gray-800">PowerBI</strong> for dynamic filtering. Utilized <strong class="text-gray-800">SQL</strong> to extract data and <strong class="text-gray-800">VBA</strong> to automate data transformation.
                         </p>
-                        <!-- Added Skill Tags -->
+                        <!-- Skill Tags -->
                         <div class="mt-5 pt-4 border-t border-gray-200">
                             <h6 class="text-sm font-bold text-gray-500 uppercase mb-3">Key Skills</h6>
                             <div class="flex flex-wrap gap-2">
@@ -184,15 +178,17 @@
 
                 <!-- Project 3: Parylene Coating Card Hanger -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                    <!-- 
-                      UPDATED: Reverted to a 2-column grid for side-by-side images.
-                      Adjusted height to h-48.
-                    -->
+                    <!-- 2-column grid for images -->
                     <div class="grid grid-cols-2 gap-2 p-2">
-                        <img src="images/parylene-hanger.png" alt="Parylene Coating Card Hanger Project - Image 1" class="w-full h-48 object-cover rounded-md">
-                        <img src="images/parylene-hanger-2.png" alt="Parylene Coating Card Hanger Project - Image 2" class="w-full h-48 object-cover rounded-md">
+                        <!-- 
+                          FIXES: 
+                          1. Changed to object-contain
+                          2. Added bg-gray-100
+                        -->
+                        <img src="images/parylene-hanger.png" alt="Parylene Coating Card Hanger Project - Image 1" class="w-full h-48 object-contain rounded-md bg-gray-100">
+                        <img src="images/parylene-hanger-2.png" alt="Parylene Coating Card Hanger Project - Image 2" class="w-full h-48 object-contain rounded-md bg-gray-100">
                     </div>
-                    <div class="p-6 pt-4"> <!-- Adjusted padding -->
+                    <div class="p-6 pt-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">Parylene Coating Card Hanger</h4>
                         
                         <h5 class="font-bold text-blue-600 mb-2">What?</h5>
@@ -204,13 +200,13 @@
                         <h5 class="font-bold text-blue-600 mb-2">How?</h5>
                         <p class="text-gray-600">
                             Designed on <strong class="text-gray-800">SolidWorks</strong> using DFM principles. Comprised of Aluminum and Delrin. Worked closely with external vendors for machining.
-                        </p>
-                        <!-- Added Skill Tags -->
+                        </loc>
+                        <!-- Skill Tags -->
                         <div class="mt-5 pt-4 border-t border-gray-200">
                             <h6 class="text-sm font-bold text-gray-500 uppercase mb-3">Key Skills</h6>
                             <div class="flex flex-wrap gap-2">
                                 <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SolidWorks</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-m"edium px-2.5 py-0.5 rounded-full">DFM</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">DFM</span>
                                 <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Vendor Management</span>
                             </div>
                         </div>
@@ -219,19 +215,22 @@
 
                 <!-- Project 4: Consumables Web Tracker -->
                 <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                    <!-- 
-                      UPDATED: Reverted to a 2-column grid for side-by-side images.
-                      Adjusted height to h-48.
-                    -->
+                    <!-- 2-column grid for images -->
                     <div class="grid grid-cols-2 gap-2 p-2">
-                        <img src="images/inventory-tracker.png" alt="Inventory Management Tool Project - Image 1" class="w-full h-48 object-cover rounded-md">
-                        <img src="images/inventory-tracker-2.png" alt="Inventory Management Tool Project - Image 2" class="w-full h-48 object-cover rounded-md">
+                        <!-- 
+                          FIXES: 
+                          1. Updated inventory-tracker-2.jpg
+                          2. Changed to object-contain
+                          3. Added bg-gray-100
+                        -->
+                        <img src="images/inventory-tracker.png" alt="Inventory Management Tool Project - Image 1" class="w-full h-48 object-contain rounded-md bg-gray-100">
+                        <img src="images/inventory-tracker-2.jpg" alt="Inventory Management Tool Project - Image 2" class="w-full h-48 object-contain rounded-md bg-gray-100">
                     </div>
-                    <div class="p-6 pt-4"> <!-- Adjusted padding -->
+                    <div class="p-6 pt-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-3">Consumables Web Tracker</h4>
                         
                         <h5 class="font-bold text-blue-600 mb-2">What?</h5>
-                        <ul class="list-disc list-inside text-gray-600 space-f-1 mb-4">
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
                             <li>Developed a web-based inventory management system.</li>
                             <li>Prevents production delays with real-time stock visibility.</li>
                             <li>Facilitates collaboration among planners, engineers, and operators.</li>
@@ -240,8 +239,8 @@
                         <h5 class="font-bold text-blue-600 mb-2">How?</h5>
                         <p class="text-gray-600">
                             Made using <strong class="text-gray-800">Google AppScript</strong> and API integration. Utilizes <strong class="text-gray-800">HTML</strong> for front-end and <strong class="text-gray-800">JavaScript</strong> for backend operations.
-                        </p> <!-- Fixed unclosed </div> tag here -->
-                        <!-- Added Skill Tags -->
+                        </p>
+                        <!-- Skill Tags -->
                         <div class="mt-5 pt-4 border-t border-gray-200">
                             <h6 class="text-sm font-bold text-gray-500 uppercase mb-3">Key Skills</h6>
                             <div class="flex flex-wrap gap-2">
@@ -267,6 +266,8 @@
     
 </body>
 </html>
+
+
 
 
 
